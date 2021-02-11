@@ -11,14 +11,14 @@ var _userConnections = [];
 //})
 app.use(express.static(path.join(__dirname, 'public')));
 //Listen on port 3000
-server = app.listen(3000)
+server = app.listen(process.env.PORT || 5000)
 
 
 //socket.io instantiation
 const io = require("socket.io")(server);
 
 
-const PORT = 3000 || process.env.PORT;
+const PORT = 5000 || process.env.PORT;
 
 //console.log(`Server running on port ${PORT}`);
 
